@@ -43,8 +43,7 @@ app.use((req, res, next) => {
   res.locals.validation_error = req.flash("validation_error");
   res.locals.success_message = req.flash("success_message");
   res.locals.email = req.flash("email");
-  res.locals.ad = req.flash("ad");
-  res.locals.soyad = req.flash("soyad");
+  res.locals.kullaniciadi = req.flash("kullaniciadi");
   res.locals.sifre = req.flash("sifre");
   res.locals.resifre = req.flash("resifre");
 
@@ -58,6 +57,7 @@ app.use(passport.session());
 
 //routerlar include edilir
 const authRouter = require("./src/routers/auth_router");
+const mainRouter = require("./src/routers/router");
 const expressEjsLayouts = require("express-ejs-layouts");
 app.use(expressEjsLayouts);
 //formdan gelen değerlerin okunabilmesi için
@@ -67,7 +67,8 @@ app.use(express.json({ limit: "10mb" })); // JSON veri limiti ayarı
 
 let requestid;
 
-app.use("/", authRouter);
+app.use("/user", authRouter);
+app.use("/", mainRouter);
 
 const server = app.listen(process.env.PORT, async () => {
   console.log(`Server ${process.env.PORT} portundan ayaklandı`);

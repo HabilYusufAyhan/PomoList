@@ -3,7 +3,7 @@ const oturumAcilmismi = function (req, res, next) {
     return next();
   } else {
     req.flash("error", ["Lütfen önce oturum açın"]);
-    res.redirect("/login");
+    res.redirect("/user/auth");
   }
 };
 

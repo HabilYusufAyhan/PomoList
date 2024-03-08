@@ -1,26 +1,29 @@
+<style>
+  .msg {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+  }
+  .failure {
+    color: white;
+    background-color: red;
+  }
+  .success {
+    color: white;
+    background-color: green;
+  }
+</style>
+
 <% validation_error.forEach(element => { %>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>  <%- element.msg  %></strong> 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-<% }) %>
-
-<% login_error.forEach(error => { %>
-  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      <strong>  <%- error  %></strong> 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-<% }) %>
-
-<% success_message.forEach(element => { %>
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>  <%- element.msg  %></strong> 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+<div class="failure msg" role="alert">
+  <strong> <%- element.msg %></strong>
+</div>
+<% }) %> <% login_error.forEach(error => { %>
+<div class="failure msg" role="alert">
+  <strong> <%- error %></strong>
+</div>
+<% }) %> <% success_message.forEach(element => { %>
+<div class="success msg" role="alert">
+  <strong> <%- element.msg %></strong>
+</div>
 <% }) %>

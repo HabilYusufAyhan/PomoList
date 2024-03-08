@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  background: url("../asset/bg.jpg");
+
+  font-family: "Roboto", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 10%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 00px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  justify-content: space-between;
+  gap: 5px;
+}
+.title {
+  font-size: 50px;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 5px;
+}
+.menu li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+  font-size: 17px;
+}
+.menu li a:hover {
+  color: rgb(146, 146, 146);
+}
+@font-face {
+  font-family: "tebesir";
+  src: url("../fonts/Rudiment.ttf") format("truetype"); /* Fontunuzun dosya yolunu buraya ekleyin */
+}
+.task .taskp {
+  color: white;
+  font-family: "tebesir", sans-serif;
+  text-shadow: 0 150px 8px;
+  font-size: 20px;
+}
+.taskf .taskp {
+  color: white;
+  font-family: "tebesir", sans-serif;
+  text-shadow: 0 150px 8px;
+  font-size: 20px;
+}
+.taskp {
+  max-width: 300px;
+}
+.actions p {
+  color: white;
+  cursor: pointer;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  font-size: 25px;
+}
+.taskmain {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.timeandtour {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.timeandtour p {
+  margin-top: 5px;
+  font-size: 10px;
+}
+.maintext {
+  display: flex;
+}
+.maintext p {
+  margin-bottom: 0;
+}
+.countmain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.hour,
+.min,
+.sec {
+  width: 10vw;
+  margin: 0;
+}
+.task,
+.taskf {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Satisfy", cursive;
+  font-size: 7vw;
+  gap: 10px;
+  text-shadow: 0 150px 13px;
+}
+.styletask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+}
+.mission {
+  font-family: "tebesir", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.tour {
+  color: white;
+  font-size: 20px;
+  font-family: "tebesir", sans-serif;
+  margin-right: 10px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* font-family: "MyCustomFont", sans-serif;*/

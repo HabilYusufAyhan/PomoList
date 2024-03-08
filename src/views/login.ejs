@@ -1,15 +1,27 @@
-<div class="container">
-  <div class="logo">
-    <h2 class="title">PomoLIST</h2>
-  </div>
-  <div class="inputs">
-    <div class="divinp">
-      <span class="emailtext">Email:</span>
-      <input type="email" />
-    </div>
-    <div class="divinp">
-      <span class="passtext">Şifre:</span>
-      <input type="password" />
-    </div>
+<div class="login-page">
+  <div class="form">
+    <% if (locals.validation_error !=undefined || locals.success_message
+    !=undefined || locals.login_error !=undefined) { %> <%-
+    include('./partials/_mesaj') %> <% } %>
+    <form action="/user/register" method="post" class="register-form">
+      <input name="kullaniciadi" type="text" placeholder="Kullanıcı Adı" />
+      <input name="sifre" type="password" placeholder="Şifre" />
+      <input
+        name="resifre"
+        type="password"
+        placeholder="Şifrenizi Yeniden Girin"
+      />
+      <input name="email" type="email" placeholder="Email" />
+      <button type="submit">Kayıt Ol</button>
+      <p class="message">Zaten bir hesabın var mı? <a href="#">Giriş Yap</a></p>
+    </form>
+    <form action="/user/login" method="post" class="login-form">
+      <input name="email" type="email" placeholder="Email" />
+      <input name="sifre" type="password" placeholder="Şifre" />
+      <button type="submit">Giriş Yap</button>
+      <p class="message">
+        Daha kayıt olmadın mı? <a href="#">Hesap Oluştur</a>
+      </p>
+    </form>
   </div>
 </div>
